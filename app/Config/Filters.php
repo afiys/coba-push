@@ -34,6 +34,9 @@ class Filters extends BaseFilters
         'forcehttps'    => ForceHTTPS::class,
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
+        'login'         => \Myth\Auth\Filters\LoginFilter::class,
+        'role'          => \Myth\Auth\Filters\RoleFilter::class,
+        'permission'    => \Myth\Auth\Filters\PermissionFilter::class,
     ];
 
     /**
@@ -69,9 +72,7 @@ class Filters extends BaseFilters
      */
     public array $globals = [
         'before' => [
-            // 'honeypot',
-            // 'csrf',
-            // 'invalidchars',
+            
         ],
         'after' => [
             // 'honeypot',
@@ -99,9 +100,11 @@ class Filters extends BaseFilters
      * before or after URI patterns.
      *
      * Example:
-     * 'isLoggedIn' => ['before' => ['account/*', 'profiles/*']]
+     * 'isLoggedIn' => ['before' => ['account/', 'profiles/']]
      *
      * @var array<string, array<string, list<string>>>
      */
-    public array $filters = [];
+    public array $filters = [
+        'login' => ['before' => ['admin/*']],
+    ];
 }

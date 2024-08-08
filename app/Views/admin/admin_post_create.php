@@ -6,6 +6,11 @@
     <title>MyBlog</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="<?= base_url('css/bootstrap.min.css') ?>" />
+    <style>
+        body {
+            background-color: #728FCE;
+        }
+</style>
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -25,7 +30,7 @@
                         <a href="<?= base_url('admin/post/new') ?>" class="btn btn-primary mr-3">New Post</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('admin/setting') ?>">Setting</a>
+                        <a class="nav-link" href="<?= base_url('admin/setting') ?>">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?= base_url('auth/logout') ?>">Logout</a>
@@ -64,6 +69,7 @@
         </footer>
     </div>
     <!-- Jquery dan Bootstrap JS -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#151B54" fill-opacity="1" d="M0,128L17.1,149.3C34.3,171,69,213,103,197.3C137.1,181,171,107,206,85.3C240,64,274,96,309,144C342.9,192,377,256,411,250.7C445.7,245,480,171,514,138.7C548.6,107,583,117,617,122.7C651.4,128,686,128,720,122.7C754.3,117,789,107,823,128C857.1,149,891,203,926,213.3C960,224,994,192,1029,170.7C1062.9,149,1097,139,1131,117.3C1165.7,96,1200,64,1234,90.7C1268.6,117,1303,203,1337,213.3C1371.4,224,1406,160,1423,128L1440,96L1440,320L1422.9,320C1405.7,320,1371,320,1337,320C1302.9,320,1269,320,1234,320C1200,320,1166,320,1131,320C1097.1,320,1063,320,1029,320C994.3,320,960,320,926,320C891.4,320,857,320,823,320C788.6,320,754,320,720,320C685.7,320,651,320,617,320C582.9,320,549,320,514,320C480,320,446,320,411,320C377.1,320,343,320,309,320C274.3,320,240,320,206,320C171.4,320,137,320,103,320C68.6,320,34,320,17,320L0,320Z"></path></svg>
     <script src="<?= base_url('js/jquery.min.js') ?>"></script>
     <script src="<?= base_url('js/bootstrap.bundle.min.js') ?>"></script>
 </body>

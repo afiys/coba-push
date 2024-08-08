@@ -7,6 +7,8 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('/about', 'Page::about');
+
+
 $routes->get('/contact', 'Page::contact');
 $routes->get('/faqs', 'Page::faqs');
 
@@ -21,6 +23,6 @@ $routes->group('admin', function($routes){
 	$routes->add('post/(:segment)/edit', 'PostAdmin::edit/$1');
 	$routes->get('post/(:segment)/delete', 'PostAdmin::delete/$1');
     $routes->get('/post', 'Post::index');
-$routes->get('/post/(:any)', 'Post::viewPost/$1');
+	$routes->get('/post/(:any)', 'Post::viewPost/$1');
     
 });
